@@ -1,4 +1,4 @@
-def conect(ssid, senha):
+def conect(ssid, password):
     import network
     import time
     station = network.WLAN(network.STA_IF)
@@ -7,5 +7,5 @@ def conect(ssid, senha):
     for t in range(50):
         if station.isconnected():
             break
-        time.sleep(0.2)
+        time.sleep(0.1)
     return station
