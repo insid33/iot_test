@@ -1,8 +1,16 @@
-from machine import Pin
-from time import sleep
- 
-led = Pin(2, Pin.OUT)
- 
+import dht
+import machine
+import time
+
+    
+
+beta = dht.DHT11(machine.Pin(2))
+
 while True:
- led.value(not led.value())
- sleep(1)
+
+    d.measure()
+    print(d.temperature())
+    
+
+    response.close()    
+    time.sleep(20)
